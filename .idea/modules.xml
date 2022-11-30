@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/Frontend.iml" filepath="$PROJECT_DIR$/Frontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/MiniSEP.iml" filepath="$PROJECT_DIR$/MiniSEP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sep.mini.Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sep.mini.Backend.main.iml" />
     </modules>
   </component>
 </project>
