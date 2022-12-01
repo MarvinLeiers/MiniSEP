@@ -17,6 +17,11 @@ public class SEPRestController {
         return filmService.getFilmById(id);
     }
 
+    @DeleteMapping("/film/{id}")
+    public void deleteFilmById(@PathVariable long id) {
+        filmService.deleteFilmById(id);
+    }
+
     @GetMapping("/film")
     public Film[] getFilms() {
         return filmService.getAllFilms();

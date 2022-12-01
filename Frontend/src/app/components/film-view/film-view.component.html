@@ -4,7 +4,7 @@
   <div class="films">
     <div *ngFor="let film of films" class="film"> <!-- TODO: Use film component -->
       <div class="absolute-padding-fix">
-        <button (click)="deleteFilm(film.id)" class="btn-delete-film">X</button>
+        <button (click)="deleteFilm(film.id)" class="btn-delete-film" title="Delete {{film.title}}">X</button>
       </div>
       <h2 class="film-title">{{film.title}} (ID: {{film.id}})</h2>
 

@@ -31,5 +31,6 @@ export class FilmViewComponent {
 
   deleteFilm(id: number) {
     console.log(`delete ${id}`);
+    this.http.delete(`${this.baseUrl}/film/${id}`).subscribe(() => this.fetchAndDisplayFilms());
   }
 }

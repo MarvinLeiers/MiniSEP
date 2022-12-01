@@ -32,4 +32,8 @@ public class FilmService {
     public Film[] getAllFilms() {
         return filmRepository.findAll().toArray(new Film[]{});
     }
+
+    public void deleteFilmById(long id) {
+        filmRepository.deleteById(id);
+    }
 }
