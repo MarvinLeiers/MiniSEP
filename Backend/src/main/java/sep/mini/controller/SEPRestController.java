@@ -17,6 +17,11 @@ public class SEPRestController {
         return filmService.getFilmById(id);
     }
 
+    @GetMapping("/film")
+    public Film[] getFilms() {
+        return filmService.getAllFilms();
+    }
+
     @PostMapping("/film")
     public void addMovie(@RequestBody Film film) {
         filmService.addFilm(film);

@@ -1,0 +1,14 @@
+<div class="film-view">
+  <button class="btn-cta btn-refresh-film-list" (click)="refreshFilmList()">Refresh list</button>
+
+  <div class="films">
+    <div *ngFor="let film of films" class="film"> <!-- TODO: Use film component -->
+      <div class="absolute-padding-fix">
+        <button (click)="deleteFilm(film.id)" class="btn-delete-film">X</button>
+      </div>
+      <h2 class="film-title">{{film.title}} (ID: {{film.id}})</h2>
+
+      <p class="film-author">- {{film.author}}</p>
+    </div>
+  </div>
+</div>

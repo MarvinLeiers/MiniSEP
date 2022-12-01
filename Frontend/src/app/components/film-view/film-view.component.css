@@ -1,0 +1,47 @@
+.film-view {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn-refresh-film-list {
+  display: block;
+  margin: 0 auto;
+  margin-block: 20px;
+}
+
+.films {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.film {
+  position: relative;
+  width: 700px;
+  height: 150px;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: .75rem 0.5rem;
+}
+
+.absolute-padding-fix {
+  position: relative;
+}
+
+.btn-delete-film {
+  position: absolute;
+  right: 0;
+  background: var(--warning-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--light-color);
+  width: 30px;
+  height: 30px;
+}
+
+.film-author {
+  color: var(--accent-color);
+}
+

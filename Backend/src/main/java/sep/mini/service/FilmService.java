@@ -28,4 +28,8 @@ public class FilmService {
     public Film[] findFilmsLike(String search) {
         return filmRepository.findFilmsLike(search);
     }
+
+    public Film[] getAllFilms() {
+        return filmRepository.findAll().toArray(new Film[]{});
+    }
 }
