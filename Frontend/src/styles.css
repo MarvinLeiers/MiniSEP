@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: 'Montserrat', Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --dark-color: #2d3436;
   --light-color: #fff;
   --accent-color: #00b894;
   --warning-color: #e74c3c;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Montserrat', Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .btn-cta {
