@@ -1,0 +1,15 @@
+<form #form="ngForm" (ngSubmit)="addMovie(form.value)">
+  <label for="title">Titel:</label>
+  <input class="form__input" type="text" name="title" id="title" ngModel>
+
+  <label for="author">Autor:</label>
+  <input class="form__input" type="text" name="author" id="author" ngModel>
+
+  <label for="duration">Dauer:</label>
+  <input class="form__input" type="number" name="duration" id="duration" ngModel>
+
+  <label for="publishedYear">Veröffentlichungsjahr:</label>
+  <input class="form__input" type="number" name="publishedYear" id="publishedYear" ngModel>
+
+  <button class="btn-cta">Hinzufügen</button>
+</form>

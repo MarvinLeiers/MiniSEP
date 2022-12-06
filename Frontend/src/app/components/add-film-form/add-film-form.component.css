@@ -1,0 +1,12 @@
+.form__input {
+  display: block;
+  padding-block: 0.3rem;
+  border: 2px solid var(--dark-color);
+  border-radius: 10px;
+}
+
+.form__input:focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+

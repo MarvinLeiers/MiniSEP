@@ -8,4 +8,6 @@ import sep.mini.model.Film;
 public interface FilmRepository extends JpaRepository<Film, Long> {
     @Query("SELECT f FROM Film AS f WHERE UPPER(f.title) LIKE CONCAT('%', UPPER(:search), '%') OR UPPER(f.author) LIKE CONCAT('%', UPPER(:search), '%')")
     Film[] findFilmsLike(@Param("search") String search);
+
+    Film findFilmByTitle(String title);
 }

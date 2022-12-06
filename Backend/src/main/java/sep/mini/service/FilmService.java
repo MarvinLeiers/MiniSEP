@@ -36,4 +36,8 @@ public class FilmService {
     public void deleteFilmById(long id) {
         filmRepository.deleteById(id);
     }
+
+    public Film findMovieByTitle(String title) {
+        return filmRepository.findFilmByTitle(title);
+    }
 }
