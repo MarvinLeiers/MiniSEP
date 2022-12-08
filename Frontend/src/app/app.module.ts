@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FilmComponent } from './components/film/film.component';
 import { FilmViewComponent } from './components/film-view/film-view.component';
 import { AddFilmFormComponent } from './components/add-film-form/add-film-form.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AddFilmFormComponent } from './components/add-film-form/add-film-form.c
     HeaderComponent,
     FilmComponent,
     FilmViewComponent,
-    AddFilmFormComponent
+    AddFilmFormComponent,
+    SearchBarComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,46 @@
+.content {
+  height: calc(100vh - var(--nav-bar-height) - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.search-bar-wrapper {
+  background: orange;
+  position: relative;
+  width: fit-content;
+}
+
+#search-film {
+  width: 40vw;
+  padding: 0.5rem 0.2rem;
+}
+
+.search-bar-wrapper > button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border: none;
+  background: var(--accent-color);
+  color: var(--light-color);
+  padding: 0.05rem 0.5rem;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.film {
+  background: orange;
+  width: 50%;
+}

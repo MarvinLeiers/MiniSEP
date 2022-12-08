@@ -1,0 +1,14 @@
+<div class="content">
+  <h1>Search a film</h1>
+  <div class="search-bar-wrapper">
+    <input type="search" name="search-film" id="search-film" (keyup)="handleSearch(inputElement.value)" #inputElement>
+    <button (click)="showSearchResults()">Search</button>
+  </div>
+</div>
+
+<div class="search-results">
+  <div *ngFor="let film of searchResults" class="film">
+    <h2>{{film.title}}</h2>
+    <p>-{{film.author}}</p>
+  </div>
+</div>
