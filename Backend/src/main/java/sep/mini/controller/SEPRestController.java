@@ -35,14 +35,14 @@ public class SEPRestController {
         if (filmService.findMovieByTitle(film.getTitle()) != null) {
             return ResponseEntity
                     .status(HttpStatus.ALREADY_REPORTED)
-                    .body(new StringResponse("Film already exists"));
+                    .body(new StringResponse("Film already exists."));
         }
 
         filmService.addFilm(film);
 
         return ResponseEntity
                 .ok()
-                .body(new StringResponse("test"));
+                .body(new StringResponse("Film has been added."));
     }
 
     @GetMapping("/search-film/{search}")

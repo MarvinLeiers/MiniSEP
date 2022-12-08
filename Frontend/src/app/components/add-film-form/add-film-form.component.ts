@@ -12,16 +12,7 @@ export class AddFilmFormComponent {
   constructor(private http: HttpClient) {
   }
 
-  addMovie(data: any) {
-    const film = {
-      title: data.title,
-      author: data.author,
-      duration: data.duration,
-      publishedYear: data.publishedYear
-    };
-
-    console.log(film);
-
+  addMovie(film: any) {
     this.http.post(`${this.baseUrl}/film`, film).subscribe((res: any) => {
       console.log(res.response)
     });
