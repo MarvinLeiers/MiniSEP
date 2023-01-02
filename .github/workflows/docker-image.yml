@@ -15,10 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Build the Docker image
+    - name: Build frontend Docker image
       run: docker build ./Frontend --tag sep_front
       
-    - name: Save Docker image
+    - name: Save frontend Docker image
       run: |
         echo 'Starting image export'
         docker save --output images/sep_frontend.tar sep_front
