@@ -4,5 +4,5 @@ COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 
 FROM nginx:alpine
-COPY --from=build /usr/src/app/target/* /usr/app/
+COPY --from=build / /
 EXPOSE 8080
