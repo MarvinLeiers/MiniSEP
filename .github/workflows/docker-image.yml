@@ -26,7 +26,7 @@ jobs:
     - name: Build backend Docker image
       run:  docker build ./Backend --tag sep_back
 
-    - name: Save backen Docker image
+    - name: Save backend Docker image
       run: |
         echo 'Starting backend image export'
         docker save --output images/sep_backend.tar sep_back
