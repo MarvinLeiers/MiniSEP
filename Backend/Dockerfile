@@ -27,33 +27,14 @@
 #COPY --from=build /Backend/build/libs/Backend-0.0.1-SNAPSHOT.jar app.jar
 #CMD ["java", "-jar", "app.jar"]
 
-FROM openjdk:17-jdk-alpine as build
+
+FROM gradle:7.6.0-jdk17-alpine AS build
 WORKDIR /Backend
+COPY --chown=gradle:gradle . .
+RUN gradle assemble --no-daemon
 
-COPY gradle gradle
-COPY build.gradle settings.gradle gradlew ./
-COPY src src
-
-EXPOSE 8080
-
-RUN ./gradlew build -x test
-RUN mkdir -p build/libs/dependency && (cd build/libs/dependency; jar -xf ../*.jar)
-
-FROM openjdk:17-jdk-alpine
+FROM openjdk:18-jdk-alpine
 VOLUME /tmp
-ARG DEPENDENCY=/Backend/build/libs/dependency
-COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
-COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","app"]
-
-#FROM gradle:7.6.0-jdk17-alpine AS build
-#WORKDIR /Backend
-#COPY --chown=gradle:gradle . .
-#RUN gradle assemble --no-daemon
-#
-#FROM openjdk:18-jdk-alpine
-#VOLUME /tmp
-#COPY --from=build /Backend/build/libs/Backend-0.0.1-SNAPSHOT.jar /Backend
-#EXPOSE 8080
-#ENTRYPOINT ["java","-jar","/Backend/Backend-0.0.1-SNAPSHOT.jar"]
+COPY --from=build /Backend/build/libs/Backend-0.0.1-SNAPSHOT.jar /Backend
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/Backend/Backend-0.0.1-SNAPSHOT.jar"]
