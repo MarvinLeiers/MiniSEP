@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Frontend Docker Image CI
 
 on:
   push:
@@ -23,19 +23,10 @@ jobs:
         echo 'Starting image export'
         docker save --output images/sep_frontend.tar sep_front
 
-    - name: Build backend Docker image
-      run:  docker build ./Backend --tag sep_back
-
-    - name: Save backend Docker image
-      run: |
-        echo 'Starting backend image export'
-        docker save --output images/sep_backend.tar sep_back
-
-    - name: Commit docker images
+    - name: Frontend docker images
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add images/sep_frontend.tar
-        git add images/sep_backend.tar
-        git commit -am 'Docker images'
+        git commit -am 'Frontend docker image'
         git push
