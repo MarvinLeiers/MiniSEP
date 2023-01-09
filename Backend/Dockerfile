@@ -19,6 +19,6 @@ RUN gradle assemble --no-daemon
 
 FROM openjdk:17-alpine
 WORKDIR /Backend
-COPY --from=build /Backend/build/libs/backend-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /Backend/build/libs/Backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
